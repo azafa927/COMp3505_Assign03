@@ -50,5 +50,15 @@ class EqualsTest {
 		assertFalse(testRange1.equals(testRange2), "Result should be False");
 	}
 	
+	@Test
+	void testLowerEquals() {
+		Range testRange2 = new Range(5,10);
+		assertFalse(testRange1.equals(testRange2), "Result should be false");
+	}
 	
+	@Test 
+	void testUpperEquals() {
+		Range testRange2 = new Range(7,16);
+		assertFalse(testRange1.equals(testRange2), "Result should be False");
+	}
 }
