@@ -27,11 +27,7 @@ jobs:
           javac -d bin/ $(find JFreeChart_A3/src/org/jfree/chart -name "*.java")
           javac -d bin/ $(find JFreeChart_A3/src/org/jfree/data -name "*.java")
           javac -d bin -cp bin:lib/junit-platform-console-standalone-1.5.2.jar $(find JFreeeChart_A3/Test/ -name "*.java")
-          java -jar dependencies/gnujaxp.jar
-          java -jar dependencies/jcommon-1.0.0-rc1-cvs.jar
-          java -jar dependencies/jcommon-1.0.5.jar
-          java -jar dependencies/mockito-all-2.0.2-beta.jar
-          java -jar dependencies/servlet.jar
+          java -jar dependencies/* --class-path bin --scan-class-path
           java -jar lib/junit-platform-console-standalone-1.5.2.jar --class-path bin --scan-class-path
 
 
