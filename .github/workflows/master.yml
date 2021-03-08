@@ -24,7 +24,7 @@ jobs:
           mkdir bin
           mkdir lib
           curl https://repo1.maven.org/maven2/org/junit/platform/junit-platform-console-standalone/1.5.2/junit-platform-console-standalone-1.5.2.jar -o lib/junit-platform-console-standalone-1.5.2.jar
-          javac -d src/ $(find chart/ -name "*.class")
+          javac -d src/ $(find org/ -name "*.class")
           javac -d src/ $(find data/ -name "*.class")
           javac -d bin -cp bin:lib/junit-platform-console-standalone-1.5.2.jar $(find Test/ -name "*.java")
           java -jar lib/junit-platform-console-standalone-1.5.2.jar --class-path bin --scan-class-path
